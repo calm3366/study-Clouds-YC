@@ -1,4 +1,5 @@
-### Задание 1. Создать Pod с именем hello-world
+## Организация сети
+### Задание 1. Yandex Cloud
 
 - [terr/vpc.tf](terr/vpc.tf) 
 - [terr/vpc_gateway.tf](terr/vpc_gateway.tf) 
