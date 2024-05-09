@@ -69,7 +69,7 @@ variable "NAT_instance_ID" {
 
 variable "instance_gr_lamp_id" {
   type    = string
-  default = "fd8e09l2blguqbdk5eej"
+  default = "fd827b91d99psvq5fjit"
   description = "ID of LAMP instance image"
 }
 

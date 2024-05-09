@@ -22,7 +22,7 @@ resource "yandex_compute_instance" "test_vm_public" {
 
   metadata = {
     serial-port-enable = var.serial-port-enable
-    ssh-keys           = local.ssh-keys-test-vm
+    user-data          = data.template_file.cloudinit-test-vm.rendered
   }
 
 }
@@ -52,7 +52,7 @@ resource "yandex_compute_instance" "test_vm_private" {
 
   metadata = {
     serial-port-enable = var.serial-port-enable
-    ssh-keys           = local.ssh-keys-test-vm
+    user-data          = data.template_file.cloudinit-test-vm.rendered
   }
 
 }
@@ -60,4 +60,12 @@ resource "yandex_compute_instance" "test_vm_private" {
 
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_family
+}
+
+data "template_file" "cloudinit-test-vm" {
+  template = file("./cloud-init-test-vm.yaml")
+  vars = {
+    username       = var.ssh_login_test_vm
+    ssh_public_key = local.file_ssh
+  }
 }

@@ -1,12 +1,12 @@
-## Организация сети
+## «Вычислительные мощности. Балансировщики нагрузки»
 ### Задание 1. Yandex Cloud
 
-- [terr/vpc.tf](terr/vpc.tf) 
-- [terr/vpc_gateway.tf](terr/vpc_gateway.tf) 
-- [terr/vpc_route_table.tf](terr/vpc_route_table.tf) 
-- [terr/vpc_security_group.tf](terr/vpc_security_group.tf) 
-- [terr/nat_instance.tf](terr/nat_instance.tf) 
-- [terr/test_vm_instances.tf](terr/test_vm_instances.tf) 
+- [instance_group.tf](terr/instance_group.tf) 
+- [cloud-init.yaml](terr/cloud-init.yaml) 
+- [balancers.tf](terr/balancers.tf) 
+- [alb_http_router.tf](terr/alb_http_router.tf) 
+- [backend_group.tf](terr/backend_group.tf) 
+- [backet.tf](terr/backet.tf) 
 - [terr/variables.tf](terr/variables.tf) 
 - [terr/locals.tf](terr/locals.tf) 
 
@@ -17,3 +17,6 @@
 
 ![!\[Alt text\](<img/!\[Alt text\](<img/3.png>)>)](<img/3.png>)
 
+![!\[Alt text\](<img/!\[Alt text\](<img/4.png>)>)](<img/4.png>)
+
+![!\[Alt text\](<img/!\[Alt text\](<img/5.png>)>)](<img/5.png>)

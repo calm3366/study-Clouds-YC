@@ -1,8 +1,5 @@
 locals {
-  # vm_web_platform_name = "vm-test-${var.vm_family}"
-  file_ssh         = file(var.ssh_file)
-  ssh-keys         = sensitive("${var.ssh_login}:${local.file_ssh}")
-  ssh-keys-test-vm = sensitive("${var.ssh_login_test_vm}:${local.file_ssh}")
+  file_ssh         = sensitive(file(var.ssh_file))
   service_id_admin =  sensitive(file(var.secure_file))
 
   info_NAT_instance = [zipmap(

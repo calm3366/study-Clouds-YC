@@ -23,6 +23,6 @@ resource "yandex_compute_instance" "nat_instance" {
 
   metadata = {
     serial-port-enable = var.serial-port-enable
-    ssh-keys           = local.ssh-keys
+    user-data          = data.template_file.cloudinit-test-vm.rendered
   }
 }

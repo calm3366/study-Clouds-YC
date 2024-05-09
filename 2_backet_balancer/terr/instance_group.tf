@@ -25,26 +25,13 @@ resource "yandex_compute_instance_group" "in-group-lamp" {
   network_interface {
       network_id = yandex_vpc_network.network.id
       subnet_ids = [yandex_vpc_subnet.public_subnet.id]
-      # nat        = true
+      nat = true
   }
-    # labels = {
-    #   label1 = "label1-value"
-    #   label2 = "label2-value"
-    # }
     metadata = {
       serial-port-enable = var.serial-port-enable
       user-data          = data.template_file.cloudinit.rendered
-      # ssh-keys           = local.ssh-keys-test-vm
     }
-    # network_settings {
-    #   type = "STANDARD"
-    # }
   }
-
-  # variables = {
-  #   test_key1 = "test_value1"
-  #   test_key2 = "test_value2"
-  # }
 
   scale_policy {
     fixed_scale {
@@ -57,10 +44,10 @@ resource "yandex_compute_instance_group" "in-group-lamp" {
   }
 
   deploy_policy {
-    max_unavailable = 0 # Максимальное количество запущенных экземпляров, которые можно перевести в автономный режим (остановить или удалить) одновременно во время процесса обновления.
+    max_unavailable = 3 # Максимальное количество запущенных экземпляров, которые можно перевести в автономный режим (остановить или удалить) одновременно во время процесса обновления.
     max_creating    = 3 # Максимальное количество экземпляров, которые можно создать одновременно.
     max_expansion   = 3 # Максимальное количество экземпляров, которые можно временно выделить сверх целевого размера группы во время процесса обновления.
-    max_deleting    = 3 # Максимальное количество экземпляров, которые можно удалить одновременно.
+    max_deleting    = 1 # Максимальное количество экземпляров, которые можно удалить одновременно.
   }
 
   # load_balancer {
@@ -78,7 +65,7 @@ data "template_file" "cloudinit" {
   template = file("./cloud-init.yaml")
   vars = {
     username       = var.ssh_login_test_vm
-    ssh_public_key = local.ssh-keys-test-vm
+    ssh_public_key = local.file_ssh
   }
 }
 

@@ -40,8 +40,8 @@ write_files:
           <article>
             <section>
               <h2>Домашнее задание "Вычислительные мощности. Балансировщики нагрузки"</h2>
-              <p>А теперь страница создана с помощью Application Load Balancer в Instance Compute Groups c применением ссылки на изображение, хранящееся в Object Storage. Работа выполнена с применением terraform манифестов. Ссылка на исходники <a href="index.html">в гите</a></p>
-              <img src="https://storage.yandexcloud.net/arihin-07.05.24/keep-calm.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YCAJERytMjW_dfVLvG4LHCTs6%2F20240508%2Fru-central1%2Fs3%2Faws4_request&X-Amz-Date=20240508T115710Z&X-Amz-Expires=108000&X-Amz-Signature=2968BA42ED2636D34A84EB2608CEBC1415FF2A6A6AAF49DDB10D5B36BCAB837A&X-Amz-SignedHeaders=host" alt="keep-calm">
+              <p>А теперь страница создана с помощью Application Load Balancer в Instance Compute Groups c применением ссылки на изображение, хранящееся в Object Storage. Работа выполнена с применением terraform манифестов. Ссылка на исходники <a href="https://github.com/calm3366/9_cloud/tree/master/2_backet_balancer/terr">в гите</a></p>
+              <img src="https://storage.yandexcloud.net/arihin-07-05-04/keep-calm.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YCAJERytMjW_dfVLvG4LHCTs6%2F20240509%2Fru-central1%2Fs3%2Faws4_request&X-Amz-Date=20240509T185926Z&X-Amz-Expires=2592000&X-Amz-Signature=0C97C705441977ED9902D701684A686C73BBF4AD7349DD55554BE06B3CE59F11&X-Amz-SignedHeaders=host" alt="keep-calm">
             </section>
           </article>
         </main>

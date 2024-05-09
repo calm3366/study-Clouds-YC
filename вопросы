@@ -1,0 +1,2 @@
+как вставить ссылку в cloud-init шаблон на картинку хранящуюся в Object Storage полученную не вручную? data "yandex_storage_object_signature" - не работает
+
