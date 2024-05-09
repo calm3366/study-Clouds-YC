@@ -7,8 +7,8 @@
 - [alb_http_router.tf](terr/alb_http_router.tf) 
 - [backend_group.tf](terr/backend_group.tf) 
 - [backet.tf](terr/backet.tf) 
-- [terr/variables.tf](terr/variables.tf) 
-- [terr/locals.tf](terr/locals.tf) 
+- [variables.tf](terr/variables.tf) 
+- [locals.tf](terr/locals.tf) 
 
 
 ![!\[Alt text\](<img/!\[Alt text\](<img/1.png>)>)](<img/1.png>)
