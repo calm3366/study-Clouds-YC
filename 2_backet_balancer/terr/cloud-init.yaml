@@ -1,0 +1,54 @@
+#cloud-config
+datasource:
+  Ec2:
+    strict_id: false
+ssh_pwauth: no
+users:
+- name: ${username}
+  sudo: 'ALL=(ALL) NOPASSWD:ALL'
+  shell: /bin/bash
+  ssh_authorized_keys:
+  - ${ssh_public_key}
+# package_update: true
+write_files:
+- path: /var/www/html/index.html
+  content: |
+      <!DOCTYPE html>
+      <html lang="ru">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netology test website</title>
+        <link rel="stylesheet" href="./styles/style.css">
+
+        <meta property="og:title" content="Заголовок страницы в OG">
+        <meta property="og:description" content="Описание страницы в OG">
+        <meta property="og:image" content="https://example.com/image.jpg">
+        <meta property="og:url" content="https://example.com/">
+      </head>
+      <body>
+        <header>
+          <h1>Тестовая страница</h1>
+          <p>Для блока домашних заданий «Организация проекта при помощи облачных провайдеров»</p>
+          <nav>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <article>
+            <section>
+              <h2>Домашнее задание "Вычислительные мощности. Балансировщики нагрузки"</h2>
+              <p>А теперь страница создана с помощью Application Load Balancer в Instance Compute Groups c применением ссылки на изображение, хранящееся в Object Storage. Работа выполнена с применением terraform манифестов. Ссылка на исходники <a href="index.html">в гите</a></p>
+              <img src="https://storage.yandexcloud.net/arihin-07.05.24/keep-calm.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YCAJERytMjW_dfVLvG4LHCTs6%2F20240508%2Fru-central1%2Fs3%2Faws4_request&X-Amz-Date=20240508T115710Z&X-Amz-Expires=108000&X-Amz-Signature=2968BA42ED2636D34A84EB2608CEBC1415FF2A6A6AAF49DDB10D5B36BCAB837A&X-Amz-SignedHeaders=host" alt="keep-calm">
+            </section>
+          </article>
+        </main>
+        <footer>
+          <p>Autor: Арихин Иван, Netology Group: DEVOPS-34</p>
+        </footer>
+      </body>
+      </html>
+
+runcmd: []
