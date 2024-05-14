@@ -1,2 +1,4 @@
-как вставить ссылку в cloud-init шаблон на картинку хранящуюся в Object Storage полученную не вручную? data "yandex_storage_object_signature" - не работает
+как вставить ссылку в cloud-init шаблон на картинку хранящуюся в Object Storage полученную не вручную? data "yandex_storage_object_signature" - не работает/не существует
 
+src=\"http://storage.yandexcloud.net/${yandex_storage_bucket.my-bucket.bucket}/${yandex_storage_object.some-picture.key}
+https://storage.yandexcloud.net/admin1/keep-calm.png
