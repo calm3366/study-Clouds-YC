@@ -19,7 +19,7 @@ resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
 resource "yandex_storage_bucket" "my-bucket" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
-  bucket     = "arihin-07-05-04"
+  bucket     = "arihin-netology"
 
   anonymous_access_flags {
     read        = true
@@ -36,17 +36,17 @@ resource "yandex_storage_bucket" "my-bucket" {
       }
     }
   }
-  
+
   //добавление сертификата для https
-  https {
-    certificate_id = "<идентификатор_сертификата>"
-  }
+  # https {
+  #   certificate_id = "<идентификатор_сертификата>"
+  # }
 }
 
 resource "yandex_storage_object" "some-picture" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
-  bucket     = "arihin-07-05-04"
+  bucket     = "arihin-netology"
   key        = "keep-calm.png"
   source     = "../keep-calm.png"
 }

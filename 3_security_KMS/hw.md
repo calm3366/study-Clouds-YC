@@ -10,15 +10,19 @@
 
 #### (Выполняется не в Terraform)* Создать статический сайт в Object Storage c собственным публичным адресом и сделать доступным по HTTPS:
 
-тут ошибка :
+
+
+![!\[Alt text\](<img/!\[Alt text\](<img/5.png>)>)](<img/5.png>)
+
+
+Т.е. применяется сертификат от GlobalSign на уровне облака. При добавлении самоподписного сертификата в раздел https ошибка:
 
 ![!\[Alt text\](<img/!\[Alt text\](<img/2.png>)>)](<img/2.png>)
 
+генерирую сертификаты так 
 
-генерирую самоподписные сертификаты так 
 
-
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server-key.pem -out server.pem -subj "/CN=arihin-07-05-04.website.yandexcloud.net/O=arihin-07-05-04.website.yandexcloud.net" `
+`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server-key.pem -out server.pem -subj "/CN=arihin-netology.website.yandexcloud.net/O=arihin-netology.website.yandexcloud.net" `
 
 или
 
@@ -26,10 +30,8 @@
   -keyout key.pem \
   -out cert.pem \
   -days 365 \
-  -subj '/CN=arihin-07-05-04.website.yandexcloud.net' `
+  -subj '/CN=arihin-netology.website.yandexcloud.net' `
 
-
-![!\[Alt text\](<img/!\[Alt text\](<img/3.png>)>)](<img/3.png>)
 
 ![!\[Alt text\](<img/!\[Alt text\](<img/4.png>)>)](<img/4.png>)
 
@@ -50,6 +52,3 @@
   }
 }
 ```
-
-
-<!-- ![!\[Alt text\](<img/!\[Alt text\](<img/5.png>)>)](<img/5.png>) -->
