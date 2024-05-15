@@ -43,10 +43,10 @@
   "traceId": "a7bca8a267f6a2b8",
   "requestId": "234570cb-0300-4837-914c-fe65093705a2",
   "status": 400,
-  "message": "{\"self_managed\":\"validating certificates: certificate is not valid for any names, but wanted to match arihin-07-05-04\"}",
+  "message": "{\"self_managed\":\"validating certificates: certificate is not valid for any names, but wanted to match arihin-netology\"}",
   "code": "GATEWAY_REQUEST_ERROR",
   "title": "Ошибка",
-  "description": "{\"self_managed\":\"validating certificates: certificate is not valid for any names, but wanted to match arihin-07-05-04\"}",
+  "description": "{\"self_managed\":\"validating certificates: certificate is not valid for any names, but wanted to match arihin-netology\"}",
   "details": {
     "grpcCode": 3
   }
