@@ -117,6 +117,7 @@ variable "private_subnet_name2" {
 variable "NAT_instance_ID" {
   type    = string
   default = "fd8e09l2blguqbdk5eej"
+  description = "ID of NAT instance image"
 }
 
 variable "instance_gr_lamp_id" {
@@ -128,26 +129,31 @@ variable "instance_gr_lamp_id" {
 variable "vm_family" {
   type    = string
   default = "ubuntu-2004-lts"
+  description = "family images for test VMs"
 }
 
 variable "vm_platform_id" {
   type    = string
   default = "standard-v1"
+  description = "https://yandex.cloud/ru/docs/compute/concepts/vm-platforms"
 }
 
 variable "ssh_login" {
   type    = string
   default = "admin"
+  description = "ssh login for all VMs"
 }
 
 variable "ssh_login_test_vm" {
   type    = string
   default = "admin"
+  description = "ssh login for test VMs"
 }
 
 variable "ssh_file" {
   type    = string
   default = "~/.ssh/id_rsa.pub"
+  description = "public key for all VMs"
 }
 
 variable "secure_file" {
