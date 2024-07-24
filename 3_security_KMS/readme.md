@@ -1,3 +1,5 @@
+Ссылка на домашнее задание - [github](https://github.com/netology-code/clopro-homeworks/blob/main/15.3.md)
+
 ## «Безопасность в облачных провайдерах»
 ### Задание 1. Yandex Cloud
 
