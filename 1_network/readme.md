@@ -1,3 +1,5 @@
+Ссылка на домашнее задание - [github](https://github.com/netology-code/clopro-homeworks/blob/main/15.1.md)
+
 ## Организация сети
 ### Задание 1. Yandex Cloud
 
