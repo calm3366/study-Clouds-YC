@@ -1,3 +1,5 @@
+Ссылка на домашнее задание - [github](https://github.com/netology-code/clopro-homeworks/blob/main/15.4.md)
+
 ## «Кластеры. Ресурсы под управлением облачных провайдеров»
 ### Задание 1. Yandex Cloud
 
